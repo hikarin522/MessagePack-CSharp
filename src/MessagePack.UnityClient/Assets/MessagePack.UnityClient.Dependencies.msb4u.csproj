@@ -37,6 +37,13 @@
     <!--Add NuGet or Project references here-->
   </ItemGroup>
 
+  <ItemGroup>
+    <NuGetPackageIdExclusionList Include="System.Numerics.Vectors" />
+    <NuGetPackageIdExclusionList Include="Microsoft.Bcl.AsyncInterfaces" />
+    <NuGetPackageIdExclusionList Include="MessagePack" />
+    <NuGetPackageIdExclusionList Include="MessagePack.Annotations" />
+  </ItemGroup>
+
   <!-- SDK.targets is imported inside this props file -->
   <Import Project="$(MSBuildForUnityGeneratedProjectDirectory)\$(MSBuildProjectName).g.targets" />
 </Project>
