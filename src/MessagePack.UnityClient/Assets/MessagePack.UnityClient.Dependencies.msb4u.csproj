@@ -26,8 +26,8 @@
   <Import Project="$([MSBuild]::GetPathOfFileAbove(MSBuildForUnity.Common.props))" Condition="Exists('$([MSBuild]::GetPathOfFileAbove(MSBuildForUnity.Common.props))')" />
 
   <PropertyGroup>
-    <UnityCurrentTargetFramework>net471</UnityCurrentTargetFramework>
-    <TargetFramework>net471</TargetFramework>
+    <UnityCurrentTargetFramework>netstandard2.0</UnityCurrentTargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <!-- SDK.props is imported inside this props file -->
