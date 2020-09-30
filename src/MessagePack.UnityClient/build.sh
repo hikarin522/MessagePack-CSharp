@@ -8,10 +8,6 @@ done
 
 SCRIPT_DIR=$(dirname "$(realpath $0)")
 
-if ! [[ -e "${SCRIPT_DIR}/Assets/Plugins/System.Memory.dll" ]] ; then
-   ${SCRIPT_DIR}/copy_assets.sh
-fi
-
 if ! [[ -v LOGFILE ]] ; then
     LOGFILE=${SCRIPT_DIR}/../../bin/build_logs/unity_package.log
 fi
@@ -27,7 +23,6 @@ $UNITYHUB_EDITORS_FOLDER_LOCATION/Unity \
     -quit \
     -nographics \
     -silent-crashes \
-    -noUpm \
     -buildTarget standalone \
     -projectPath ${SCRIPT_DIR} \
     -executeMethod PackageExporter.Export \

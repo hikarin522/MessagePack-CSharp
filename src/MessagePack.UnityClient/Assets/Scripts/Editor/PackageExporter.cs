@@ -23,7 +23,8 @@ public static class PackageExporter
             .Select(x => "Assets" + x.Replace(Application.dataPath, "").Replace(@"\", "/"))
             .ToArray();
 
-        var netStandardsAsset = Directory.EnumerateFiles(Path.Combine(Application.dataPath, "Plugins/"), "*", SearchOption.AllDirectories)
+        var netStandardsAsset = Directory.EnumerateFiles(Path.Combine(Application.dataPath, "Dependencies/netstandard2.0"), "*", SearchOption.AllDirectories)
+            .Where(x => Path.GetExtension(x) == ".dll" || Path.GetExtension(x) == ".dll.meta")
             .Select(x => "Assets" + x.Replace(Application.dataPath, "").Replace(@"\", "/"))
             .ToArray();
 
